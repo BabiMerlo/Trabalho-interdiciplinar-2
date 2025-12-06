@@ -6,7 +6,7 @@ export class Atleta extends Pessoa{
 
     constructor(nome, dataNasc, cpf, email, modalidade){
         super(nome, dataNasc, cpf, email);
-        this.#modalidade = modalidade;
+        this.modalidade = modalidade;
     }
 
     get modalidade(){
