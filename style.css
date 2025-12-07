@@ -110,3 +110,42 @@ footer {
     margin-top: 30px;
     font-size: 14px;
 }
+
+/* Adicione ou modifique estas regras no seu style.css */
+
+.caixa {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.lista-dados {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #0056b3; /* Cor principal para destaque */
+    border-radius: 8px;
+}
+
+.item-lista {
+    border-bottom: 1px dashed #ddd;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.item-lista:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.item-lista pre {
+    white-space: pre-wrap; /* Garante quebras de linha do toString */
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    padding: 5px;
+    border-left: 3px solid #0056b3;
+}

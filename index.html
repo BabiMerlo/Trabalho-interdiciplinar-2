@@ -22,42 +22,35 @@
 
     <main>
         <img src="bannerInscricoes.webp" class="banner" alt="Banner Inscrições">
-        <h1>Inscrição</h1>
+        <h1>Visualizar Dados</h1>
 
-        <form class="caixa">
+        <div class="caixa" id="painelVisualizacao">
+            <h2>Escolha o que visualizar:</h2>
             <div class="campo">
-                <label>Nome:</label>
-                <input type="text" placeholder="Informe seu nome">
+                <input type="radio" id="radioAtletas" name="visualizacao" value="atletas" checked>
+                <label for="radioAtletas">Atletas</label>
+            </div>
+            
+            <div class="campo">
+                <input type="radio" id="radioCompeticoes" name="visualizacao" value="competicoes">
+                <label for="radioCompeticoes">Competições</label>
+            </div>
+        </div>
+
+        <div id="listaAtletas" class="lista-dados">
+            <h2>Lista de Atletas</h2>
             </div>
 
-            <div class="campo">
-                <label>Email:</label>
-                <input type="email" placeholder="Informe seu email">
+        <div id="listaCompeticoes" class="lista-dados" style="display: none;">
+            <h2>Lista de Competições</h2>
             </div>
-
-            <div class="campo">
-                <label>CPF:</label>
-                <input type="text" placeholder="Informe seu CPF">
-            </div>
-
-            <div class="campo">
-                <label>Tipo:</label>
-                <select>
-                    <option disabled selected>Selecione...</option>
-                    <option>Aluno</option>
-                    <option>Servidor</option>
-                    <option>Visitante</option>
-                </select>
-            </div>
-
-            <button type="submit" class="btCadastrar">Cadastrar</button>
-        </form>
-    </main>
+        
+        </main>
 
     <footer>
         &copy; IfesRaces
     </footer>
 
-    <script type="module" src="Pessoa.js"></script>
+    <script type="module" src="Listas.js"></script>
 </body>
 </html>
