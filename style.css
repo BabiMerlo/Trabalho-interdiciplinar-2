@@ -111,8 +111,6 @@ footer {
     font-size: 14px;
 }
 
-/* Adicione ou modifique estas regras no seu style.css */
-
 .caixa {
     max-width: 600px;
     margin: 20px auto;
@@ -126,7 +124,7 @@ footer {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    border: 2px solid #0056b3; /* Cor principal para destaque */
+    border: 2px solid #0056b3;
     border-radius: 8px;
 }
 
@@ -142,7 +140,7 @@ footer {
 }
 
 .item-lista pre {
-    white-space: pre-wrap; /* Garante quebras de linha do toString */
+    white-space: pre-wrap;
     font-family: Arial, sans-serif;
     line-height: 1.5;
     background-color: #fff;
