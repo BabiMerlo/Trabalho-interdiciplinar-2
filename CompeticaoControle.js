@@ -48,17 +48,20 @@ export class CompeticaoControle{
         if(indCompeticaoParaAtt != -1){
             if(distancia != ""){
                 this.#lstCompeticoes[indCompeticaoParaAtt].distancia = distancia;
-
-            } else if(dataHorario != ""){
-                this.#lstCompeticoes[indCompeticaoParaAtt].dataHorario = dataHorario;
-
-            } else if(local != ""){
-                this.#lstCompeticoes[indCompeticaoParaAtt].local = local;
-
-            } else if(limiteVagas != 0){
-                this.#lstCompeticoes[indCompeticaoParaAtt].limiteVagas = limiteVagas;
-
             }
+
+            if(dataHorario != ""){
+                this.#lstCompeticoes[indCompeticaoParaAtt].dataHorario = dataHorario;
+            }
+
+            if(local != ""){
+                this.#lstCompeticoes[indCompeticaoParaAtt].local = local;
+            }
+
+            if(limiteVagas != 0){
+                this.#lstCompeticoes[indCompeticaoParaAtt].limiteVagas = limiteVagas;
+            }
+            
             localStorage.setItem("lstCompeticoes", JSON.stringify(this.#lstCompeticoes));
             return true;
         }
