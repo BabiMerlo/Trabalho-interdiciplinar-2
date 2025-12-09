@@ -1,0 +1,51 @@
+
+.btn-organizador {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+/* Contêiner da imagem */
+.img1 {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* imagem ocupa a tela inteira */
+    overflow: hidden;
+}
+
+.img1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* deixa a imagem cortada e ajustada */
+}
+
+/* Estilo geral para os textos sobre a imagem */
+.img1 h1,
+.img1 p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00000090;
+    color: white;
+    padding: 20px 35px;
+    text-align: center;
+    border-radius: 50px;  /* deixa o fundo redondo/oval */
+    max-width: 80%;
+}
+
+/* Posição específica de cada texto */
+.img1 h1 {
+    top: 20%;   /* mais acima */
+    font-size: 40px;
+}
+
+.img1 p {
+    top: 60%;   /* mais abaixo */
+    font-size: 30px;
+}
+

@@ -136,3 +136,4 @@ document.addEventListener('DOMContentLoaded', () => {
     inLocal.addEventListener('input', filtroCompeticaoHandler);
     inDistancia.addEventListener('input', filtroCompeticaoHandler);
 });
+
