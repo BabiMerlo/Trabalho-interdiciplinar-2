@@ -1,3 +1,6 @@
+import {Atleta} from "./Atleta.js";
+import {Competidor} from "./Competidor.js";
+
 export class Competicao{
     #nome;
     #distancia;
@@ -90,5 +93,24 @@ export class Competicao{
                "\nData/Horário: " + this.#dataHorario +
                "\nLocal: " + this.#local + 
                "\nVagas: " + this.#lstCompetidores.length + "/" + this.#limiteVagas;
+    }
+
+    inscreverAtleta(atleta, classificacao){
+        if(atleta instanceof Atleta){
+            let atletaInscrito = false;
+            for(let i = 0; i < this.#lstCompetidores.length; i++){
+                if(this.#lstCompetidores[i].atleta == atleta){
+                    atletaInscrito = true;
+                }
+            }
+
+            if(atletaInscrito = false){
+                let novoCompetidor = new Competidor(atleta, classificacao);
+                this.#lstCompetidores.push(novoCompetidor);
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
 }
