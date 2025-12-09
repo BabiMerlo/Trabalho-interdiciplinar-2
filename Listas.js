@@ -1,4 +1,3 @@
-import { Organizador } from './Organizador.js';
 import { Atleta } from './Atleta.js';
 import { Competicao } from './Competicao.js';
 
@@ -22,8 +21,6 @@ const listaDeAtletas = [
     new Atleta("Ana Costa", "20/03/2005", "11223344556", "ana@email.com", "Maratona", "SunGear"),
     new Atleta("Otto Hightower", "21/08/1968", "11223344556", "otto@email.com", "Trail Running", "EASports"),
 ];
-
-const organizadorEvento = new Organizador("Carlos Souza", "10/10/1985", "10101010101", "carlos@ifes.br", "Coordenação");
 
 const listaDeCompeticoes = [
     new Competicao("Maratona IFES 2026", "Vitória", "42.195 km"),
