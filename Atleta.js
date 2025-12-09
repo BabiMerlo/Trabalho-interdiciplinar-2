@@ -13,7 +13,7 @@ export class Atleta extends Pessoa{
     }
 
     set modalidade(novaModalidade){
-        if(novaModalidade != this.#modalidade){
+        if(novaModalidade != ""){
             this.#modalidade = novaModalidade;
             return true;
         }

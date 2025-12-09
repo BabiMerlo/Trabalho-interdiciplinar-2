@@ -1,25 +1,19 @@
 export class Competicao{
     #nome;
-    #tipo;
     #distancia;
     #mapa;
-    #data;
-    #horario;
+    #dataHorario;
     #local;
     #limiteVagas;
-    #dificuldade;
     #lstCompetidores = [];
 
-    constructor(nome, tipo, distancia, mapa, data, horario, local, limiteVagas, dificuldade){
-        this.#nome = nome;
-        this.#tipo = tipo;
-        this.#distancia = distancia;
-        this.#mapa = mapa;
-        this.#data = data;
-        this.#horario = horario;
-        this.#local = local;
-        this.#limiteVagas = limiteVagas;
-        this.#dificuldade = dificuldade;
+    constructor(nome, distancia, mapa, dataHorario, local, limiteVagas){
+        this.nome = nome;
+        this.distancia = distancia;
+        this.mapa = mapa;
+        this.dataHorario = dataHorario;
+        this.local = local;
+        this.limiteVagas = limiteVagas;
     }
 
     get nome(){
@@ -29,18 +23,6 @@ export class Competicao{
     set nome(novoNome){
         if(novoNome != ""){
             this.#nome = novoNome;
-            return true;
-        }
-        return false;
-    }
-
-    get tipo(){
-        return this.#tipo;
-    }
-
-    set tipo(novoTipo){
-        if(novoTipo != ""){
-            this.#tipo = novoTipo;
             return true;
         }
         return false;
@@ -68,25 +50,13 @@ export class Competicao{
         }
     }
 
-    get data(){
-        return this.#data;
+    get dataHorario(){
+        return this.#dataHorario;
     }
 
-    set data(novaData){
-        if(novaData != ""){
-            this.#data = novaData;
-            return true;
-        }
-        return false;
-    }
-
-    get horario(){
-        return this.#horario;
-    }
-
-    set horario(novoHorario){
-        if(novoHorario != ""){
-            this.#horario = novoHorario;
+    set dataHorario(novaDataHorario){
+        if(novaDataHorario != ""){
+            this.#dataHorario = Date(novaDataHorario);
             return true;
         }
         return false;
@@ -114,19 +84,11 @@ export class Competicao{
         }
     }
 
-    get dificuldade(){
-        return this.#dificuldade;
+    toString(){
+        return "Competição: " + this.#nome +
+               "\nDistância: " + this.#distancia + "Km" +
+               "\nData/Horário: " + this.#dataHorario +
+               "\nLocal: " + this.#local + 
+               "\nVagas: " + this.#lstCompetidores.length + "/" + this.#limiteVagas;
     }
-
-    set dificuldade(novaDificuldade){
-        if(novaDificuldade != ""){
-            if(novaDificuldade == "Fácil" || novaDificuldade == "Médio" || novaDificuldade == "Difícil"){
-                this.#dificuldade = novaDificuldade;
-                return true;
-            }
-            return false;
-        }
-        return false;
-    }
-
 }
