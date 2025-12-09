@@ -1,12 +1,20 @@
-import {Competicao} from "./Competicao.js";
+import {Maratona} from "./Maratona.js";
+import {CorridaTrilha} from "./CorridaTrilha.js";
 
 export class CompeticaoControle{
     static #lstCompeticoes = [];
 
-    static criarCompeticao(nome, distancia, dataHorario, local, limiteVagas){
+    static criarMaratona(nome, distancia, dataHorario, local, limiteVagas){
         let mapa = "mapa-corrida.jpg";
-        let novaCompeticao = new Competicao(nome, distancia, mapa, dataHorario, local, limiteVagas);
-        this.#lstCompeticoes.push(novaCompeticao);
+        let novaMaratona = new Maratona(nome, distancia, mapa, dataHorario, local, limiteVagas);
+        this.#lstCompeticoes.push(novaMaratona);
+        localStorage.setItem("lstCompeticoes", JSON.stringify(this.#lstCompeticoes));
+    }
+
+    static criarCorridaTrilha(nome, distancia, dataHorario, local, limiteVagas, checkpoints, dificuldade){
+        let mapa = "mapa-corrida.jpg";
+        let novaCorridaTrilha = new CorridaTrilha(nome, distancia, mapa, dataHorario, local, limiteVagas, checkpoints, dificuldade);
+        this.#lstCompeticoes.push(novaCorridaTrilha);
         localStorage.setItem("lstCompeticoes", JSON.stringify(this.#lstCompeticoes));
     }
 
