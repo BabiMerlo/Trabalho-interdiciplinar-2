@@ -38,7 +38,7 @@
     <div class="container">
         <h2>Gerenciar Competições</h2>
 
-        <form class="form" id="formCompeticao"> 
+        <form class="form" id="formCompeticao">
 
             <label>Nome</label>
             <input type="text" id="inNome" placeholder="Nome do evento">
@@ -46,8 +46,8 @@
             <div class="linha">
                 <div class="campo">
                     <label>Tipo</label>
-                    <select id="selTipoEvento">
-                        <option disabled selected >Selecione</option>
+                    <select id="sltEvento">
+                        <option disabled selected>Selecione</option>
                         <option value="Maratona">Maratona</option>
                         <option value="Trail Run">Trail Run</option>
                         <option value="Outro">Outro</option>
@@ -61,7 +61,7 @@
             </div>
 
             <label>Nível de dificuldade (Trail)</label>
-            <select id="selDificuldade" disabled> 
+            <select id="sltDificuldade" disabled>
                 <option disabled selected>Selecione</option>
                 <option value="Fácil">Fácil</option>
                 <option value="Médio">Médio</option>
@@ -98,6 +98,27 @@
         </form>
     </div>
 
+    <section class="tabela-container">
+        <h3>Lista de Competições Cadastradas</h3>
+        <table id="tabelaCompeticoes">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Distância</th>
+                    <th>Data</th>
+                    <th>Local</th>
+                    <th>Vagas</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    <div>
+        <h2 id="outSaida"></h2>
+    </div>
 
     <footer>
         ©IfesRaces 2025
@@ -106,4 +127,5 @@
     <script type="module" src="../JS/CriarCompeticao.js"></script>
 
 </body>
+
 </html>
