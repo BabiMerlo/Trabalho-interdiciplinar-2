@@ -50,7 +50,7 @@ export class Competicao {
                "\nTipo: " + this.tipo +
                "\nLocal: " + this.local +
                "\nDistância: " + this.distancia +
-               "\nData/Hora: " + dataFormatada + " às " + this.horario +
+               "\nData/Hora: " + this.data + " às " + this.horario +
                "\nVagas: " + this.limiteVagas;
     }
 }
