@@ -1,5 +1,5 @@
-import {Atleta} from "./Atleta.js";
-import {Competidor} from "./Competidor.js";
+import {Atleta} from "./atleta.js";
+import {Competidor} from "./competidor.js";
 
 export class Competicao{
     #nome;

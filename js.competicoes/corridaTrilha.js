@@ -1,4 +1,4 @@
-import { Competicao } from "./Competicao.js";
+import { Competicao } from "./competicao.js";
 
 export class CorridaTrilha extends Competicao{
     #checkpoints;

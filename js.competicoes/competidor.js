@@ -1,4 +1,4 @@
-import {Atleta} from "./Atleta.js";
+import {Atleta} from "./atleta.js";
 
 export class Competidor{
     #atleta;

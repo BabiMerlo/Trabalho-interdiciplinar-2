@@ -1,0 +1,79 @@
+/* mude a letra que esta na imagens */
+
+.img1 {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* imagem ocupa a tela inteira */
+    overflow: hidden;
+}
+
+.img1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* deixa a imagem cortada e ajustada */
+}
+
+/* Estilo geral para os textos sobre a imagem */
+.img1 h1 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1aa9d490;
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+    border-radius: 50px;  /* deixa o fundo redondo/oval */
+}
+
+.img1 h1 {
+    top: 50%;  
+    font-size: 70px;
+    font-family: "Baskerville ",
+
+}
+label {
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: #c9c9c9;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.form input,
+.form select {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px 0;
+    border-radius: 10px;
+    border: none;
+    background: #e8e6e6;
+    font-size: 14px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.campo {
+    flex: 1;
+}
+
+
+.btn-cadastrar {
+    background: green;
+    color: white;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    font-size: 16px;
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar Organizador</title>
+    <link rel="stylesheet" href="css/loguin.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <img src="imagens/logo.png" class="logo" alt="IfesRaces Logo">
+
+        <button class="btn-organizador">
+            <i class="fa fa-user"></i> Organizador
+        </button>
+    </header>
+    <div class="top-border-line"></div>
+
+
+    <main class="container">
+
+        <h1>Entrar Organizador</h1>
+
+        <form class="login-form">
+
+            <div class="input-box">
+                <i class="fa fa-envelope"></i>
+                <input id="inEmail" type="email" placeholder="Digite seu email" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa fa-lock"></i>
+                <input id="inSenha" type="password" placeholder="Senha" required>
+            </div>
+
+            <a href="#" class="recuperar">Esqueceu a senha? Recuperar</a>
+
+            <div class="social-login">
+                <img src="imagens/google.png" class="social-icon">
+                <img src="imagens/facebook.png" class="social-icon">
+            </div>
+
+            <p class="cadastro">Não tem conta? <a href="#">Cadastrar</a></p>
+
+
+        </form>
+
+        <button id="btAcessar" type="button" class="btn-acessar">Acessar</button>
+
+        <p id="outMsg"></p>
+
+
+    </main>
+
+    <footer>
+        ©IfesRaces 2025
+    </footer>
+
+    <script src="JavaScript/loguim.js"></script>
+
+</body>
+
+</html>

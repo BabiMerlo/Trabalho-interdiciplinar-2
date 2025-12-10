@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar Organizador</title>
+    <link rel="stylesheet" href="css/competicoes.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <img src="imagens/logo.png" class="logo" alt="IfesRaces Logo">
+
+        <nav class="menu">
+            <a href="home.html" class="menu-item ">
+                <i class="fa fa-home"></i> Home
+            </a>
+
+            <a href="atletas.html" class="menu-item ">
+                <i class="fa fa-user"></i> Inscrição de Atletas
+            </a>
+
+            <a href="competicoes.html" class="menu-item ativo">
+                <i class="fa fa-flag"></i> Inscrição de Competições
+            </a>
+            <a href="inscricoes.html" class="menu-item">
+                <i class="fa fa-list"></i> Inscrições
+            </a>
+        </nav>
+
+
+    </header>
+    <div class="top-border-line"></div>
+
+
+    <div class="container">
+        <h2>Gerenciar Competições</h2>
+
+        <form class="form">
+
+            <label>Nome</label>
+            <input type="text" id="inNome" placeholder="Nome do evento">
+
+            <div class="linha">
+                <div class="campo">
+                    <label>Tipo</label>
+                    <select id="selTipoEvento">
+                        <option disabled selected >Selecione</option>
+                        <option value="">Maratona</option>
+                        <option value="">Trail Run</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Distância</label>
+                    <input type="text" id="inDistancia" placeholder="Distância do evento">
+                </div>
+            </div>
+
+            <label>Nível de dificuldade (Trail)</label>
+            <select id="selDificuldade">
+                <option disabled selected>Selecione</option>
+                <option value="">Fácil</option>
+                <option value="">Médio</option>
+                <option value="">Difícil</option>
+            
+            </select>
+
+            <div class="linha">
+                <div class="campo">
+                    <label>Data</label>
+                    <input  id="inData" type="date">
+                </div>
+
+                <div class="campo">
+                    <label>Horário</label>
+                    <input id="inHorario" type="time">
+                </div>
+            </div>
+
+            <label>Local</label>
+            <input type="text" id="inLocal" placeholder="Cidade, local de largargada">
+
+            <label>Limite de vagas</label>
+            <input id="inVagas" type="number">
+
+            <label>Mapa do percurso (arquivo)</label>
+            <input type="file">
+
+            <div class="botoes">
+                <button type="button" id="btEditar" class="edit">Editar</button>
+                <button type="submit" id="btCriar" class="save">Salvar</button>
+                <button type="button" id="btExcluir" class="delete">Excluir</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    <footer>
+        ©IfesRaces 2025
+    </footer>
+
+<script type="module" src="js.competicoes/competicaoView.js"></script>
+
+</body>
+
+</html>

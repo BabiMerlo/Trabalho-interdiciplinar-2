@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar Organizador</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <img src="imagens/logo.png" class="logo" alt="IfesRaces Logo">
+
+        <nav class="menu">
+            <a href="home.html" class="menu-item ativo">
+                <i class="fa fa-home"></i> Home
+            </a>
+
+            <a href="atletas.html" class="menu-item ">
+                <i class="fa fa-user"></i> Inscrição de Atletas
+            </a>
+
+            <a href="competicoes.html" class="menu-item">
+                <i class="fa fa-flag"></i> Inscrição de Competições
+            </a>
+            <a href="inscricoes.html" class="menu-item">
+                <i class="fa fa-list"></i> Inscrições
+</a>
+        </nav>
+
+
+    </header>
+    <div class="top-border-line"></div>
+
+    <div class="img1">
+        <img src="imagens/img1.jpg" class="logo-corrida" alt="IfesRaces Logo">
+        <h1>CADA DIA UM NOVO DESAFIO </h1>
+        <p>
+            Hoje no IfesRaces temos diversos
+            eventos com inscrições abertas
+            para você desafiar os seus limites </p>
+
+    </div>
+
+        <div class="container">
+            </div>
+    </header>
+
+    <main>
+        
+
+        <div class="caixa" id="painelVisualizacao">
+            <h2>Escolha o que visualizar:</h2>
+            <div class="campo">
+                <input type="radio" id="radioAtletas" name="visualizacao" value="atletas" checked>
+                <label for="radioAtletas">Atletas</label>
+            </div>
+            
+            <div class="campo">
+                <input type="radio" id="radioCompeticoes" name="visualizacao" value="competicoes">
+                <label for="radioCompeticoes">Competições</label>
+            </div>
+            
+            <div class="campo" id="filtroNome">
+                <label for="inputNomeAtleta">Buscar por Atleta:</label>
+                <input type="text" id="inputNomeAtleta" placeholder="Digite o nome do atleta">
+            </div>
+            <div class="campo" id="filtroModalidade">
+                <label for="selectModalidade">Filtrar por Modalidade:</label>
+                <select id="selectModalidade">
+                    <option value="todos">Todas as Modalidades</option>
+                    <option value="Maratona">Maratona</option>
+                    <option value="Trail Running">Trail Running</option>
+                </select>
+            </div>
+
+            <div class="campo" id="filtroCompeticaoNome">
+                <label for="inputNomeCompeticao">Buscar por Nome:</label>
+                <input type="text" id="inputNomeCompeticao" placeholder="Nome da competição">
+            </div>
+            <div class="campo" id="filtroCompeticaoLocal">
+                <label for="inputLocalCompeticao">Buscar por Local:</label>
+                <input type="text" id="inputLocalCompeticao" placeholder="Local da competição">
+            </div>
+            <div class="campo" id="filtroCompeticaoDistancia">
+                <label for="inputDistanciaCompeticao">Buscar por Distância:</label>
+                <input type="text" id="inputDistanciaCompeticao" placeholder="Distância (ex: 42km)">
+            </div>
+            </div>
+
+        <div id="listaAtletas" class="lista-dados"></div>
+        <div id="listaCompeticoes" class="lista-dados" style="display: none;"></div>
+    </main>
+
+    <footer>
+        &copy; IfesRaces
+    </footer>
+
+    <script type="module" src="js.home/Listas.js"></script>
+
+
+
+</body>
+
+</html>

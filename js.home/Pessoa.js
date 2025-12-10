@@ -29,7 +29,7 @@ export class Pessoa{
 
     set dataNasc(novaData){
         if(novaData != ""){
-            this.#dataNasc = Date(novaData);
+            this.#dataNasc = novaData;
             return true;
         }
         return false;
