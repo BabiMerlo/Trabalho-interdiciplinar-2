@@ -28,12 +28,12 @@ export class Pessoa{
     }
 
     set dataNasc(novaData){
-        if(novaData != ""){
+        if(novaData != "" && novaData.length == 10){
             this.#dataNasc = novaData;
             return true;
         }
         return false;
-    }
+    }   
 
     get CPF(){
         return this.#CPF;

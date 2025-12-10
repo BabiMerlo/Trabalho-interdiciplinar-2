@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar Organizador</title>
+    <link rel="stylesheet" href="../CSS/inscricoes.css">
+    <link rel="stylesheet" href="../CSS/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <img src="../IMAGENS/logo.png" class="logo" alt="IfesRaces Logo">
+
+        <nav class="menu">
+            <a href="Home.html" class="menu-item ">
+                <i class="fa fa-home"></i> Home
+            </a>
+
+            <a href="CadastrarAtleta.html" class="menu-item ">
+                <i class="fa fa-user"></i> Cadastro de Atletas
+            </a>
+
+            <a href="CriarCompeticao.html" class="menu-item ">
+                <i class="fa fa-flag"></i> Inscrição de Competições
+            </a>
+            <a href="InscreverNaCompeticao.html" class="menu-item ativo">
+                <i class="fa fa-list"></i> Inscrições
+            </a>
+        </nav>
+
+
+    </header>
+    <div class="top-border-line"></div>
+
+    </header>
+
+    <div class="top-border-line"></div>
+    <div class="img1">
+        <img src="../IMAGENS/img3.jpg" class="logo-corrida" alt="IfesRaces Logo">
+        <h1>Inscrição na Competição </h1>
+
+    </div>
+
+    <div class="container">
+        <h2>Gerenciar Competições</h2>
+        <form class="form">
+
+
+            <section>
+                <label>Competição</label>
+                <select id="sltConpeticao">
+                    <div class="campo">
+
+                        <option value="" disabled selected>Selecione uma Competição</option>
+                </select>
+
+                <section>
+                    <label> Ação </label>
+                    <select id="sltAcao">
+                        <div class="campo">
+
+
+                            <option value="" disabled selected>Selecione uma ação</option>
+                            <option value="maratona">Adicionar</option>
+                            <option value="trailrun">Remover</option>
+                    </select>
+
+                    <section>
+                        <label>Atleta</label>
+                        <select id="sltAtleta">
+                            <div class="campo">
+
+                                <option value="" disabled selected>Selecione um atleta</option>
+                        </select>
+
+                        <button id="btCadastra" class="btn-cadastrar">Cadastrar</button>
+
+                        <script src="js.inscricoes/inscricaoView.js"></script>
+
+        </form>
+    </div>
+
+    <footer>
+        ©IfesRaces 2025
+    </footer>
+
+</body>
+
+</html>

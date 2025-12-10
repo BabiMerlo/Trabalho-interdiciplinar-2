@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Atleta</title>
+    <link rel="stylesheet" href="../CSS/atletas.css">
+    <link rel="stylesheet" href="../CSS/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <img src="../IMAGENS/logo.png" class="logo" alt="IfesRaces Logo">
+
+        <nav class="menu">
+            <a href="Home.html" class="menu-item ">
+                <i class="fa fa-home"></i> Home
+            </a>
+
+            <a href="CadastrarAtleta.html" class="menu-item ativo ">
+                <i class="fa fa-user"></i> Cadastro de Atletas
+            </a>
+
+            <a href="CriarCompeticao.html" class="menu-item ">
+                <i class="fa fa-flag"></i> Inscrição de Competições
+            </a>
+            <a href="InscreverNaCompeticao.html" class="menu-item ">
+                <i class="fa fa-list"></i> Inscrições
+            </a>
+        </nav>
+
+
+    </header>
+    <div class="top-border-line"></div>
+
+    </header>
+
+    <div class="top-border-line"></div>
+    <div class="img1">
+        <img src="../IMAGENS/img2.jpg" class="logo-corrida" alt="IfesRaces Logo">
+        <h1>Inscrição </h1>
+
+    </div>
+
+    <main class="form-container">
+
+        <form class="form-box" id="formCadastro"> 
+
+            <label>NOME
+                <input type="text" id="inNome" placeholder="Informe seu nome">
+            </label>
+
+            <label>EMAIL
+                <input type="email" id="inEmail" placeholder="Informe seu email">
+            </label>
+            
+            <label>DATA DE NASCIMENTO
+                <input type="text" id="inDataNasc" placeholder="DD/MM/AAAA">
+            </label>
+
+            <label>CPF
+                <input type="text" id="inCpf" placeholder="Informe seu cpf">
+            </label>
+
+            <label>TIPO
+                <select id="sltTipo">
+                    <option disabled selected>Informe o tipo</option>
+                    <option value="Maratona">Maratona</option>
+                    <option value="Trail Running">Trail Run</option> </select>
+            </label>
+
+            <label>CHECKPOINT
+                <input type="text" id="inCheck" placeholder="Informe o Checkpoint" disabled>
+            </label>
+
+            <label>DIFICULDADE
+                <input type="text" id="inDificuldade" placeholder="Informe a dificuldade" disabled>
+            </label>
+
+            <button id="btCadastra" class="btn-cadastrar">Cadastrar</button>
+
+        </form>
+    </main>
+
+    <footer>
+        ©IfesRaces 2025
+    </footer>
+
+
+    <script type="module" src="../JS/Cadastro.js"></script>
+</body>
+
+</html>

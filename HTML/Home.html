@@ -1,19 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Ifes Races</title>
+    <title>HOME</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            </div>
+
+    <header class="top-bar">
+        <img src="../IMAGENS/logo.png" class="logo" alt="IfesRaces Logo">
+
+        <nav class="menu">
+            <a href="Home.html" class="menu-item ativo">
+                <i class="fa fa-home"></i> Home
+            </a>
+
+            <a href="CadastrarAtleta.html" class="menu-item ">
+                <i class="fa fa-user"></i> Inscrição de Atletas
+            </a>
+
+            <a href="CriarCompeticao.html" class="menu-item">
+                <i class="fa fa-flag"></i> Inscrição de Competições
+            </a>
+            <a href="InscreverNaCompeticao.html" class="menu-item">
+                <i class="fa fa-list"></i> Inscrições
+            </a>
+        </nav>
+
+
+    </header>
+    <div class="top-border-line"></div>
+
+    <div class="img1">
+        <img src="../IMAGENS/img1.jpg" class="logo-corrida" alt="IfesRaces Logo">
+        <h1>CADA DIA UM NOVO DESAFIO </h1>
+        <p>
+            Hoje no IfesRaces temos diversos
+            eventos com inscrições abertas
+            para você desafiar os seus limites </p>
+
+    </div>
+
+    <div class="container">
+    </div>
     </header>
 
     <main>
-        <img src="bannerInscricoes.webp" class="banner" alt="Banner Inscrições">
         <h1>Visualizar Dados</h1>
 
         <div class="caixa" id="painelVisualizacao">
@@ -22,12 +59,12 @@
                 <input type="radio" id="radioAtletas" name="visualizacao" value="atletas" checked>
                 <label for="radioAtletas">Atletas</label>
             </div>
-            
+
             <div class="campo">
                 <input type="radio" id="radioCompeticoes" name="visualizacao" value="competicoes">
                 <label for="radioCompeticoes">Competições</label>
             </div>
-            
+
             <div class="campo" id="filtroAtleta">
                 <label for="inAtleta">Buscar por Atleta:</label>
                 <input type="text" id="inAtleta" placeholder="Digite o nome do atleta">
@@ -53,16 +90,17 @@
                 <label for="inDistancia">Buscar por Distância:</label>
                 <input type="text" id="inDistancia" placeholder="Distância (ex: 42km)">
             </div>
-            </div>
 
-        <div id="listaAtletas" class="lista-dados"></div>
-        <div id="listaCompeticoes" class="lista-dados" style="display: none;"></div>
+            <div id="listaAtletas" class="lista-dados"></div>
+            <div id="listaCompeticoes" class="lista-dados" style="display: none;"></div>
     </main>
 
     <footer>
         &copy; IfesRaces
     </footer>
 
-    <script type="module" src="Listas.js"></script> 
+    <script type="module" src="../JS/Listas.js"></script>
+
 </body>
+
 </html>
