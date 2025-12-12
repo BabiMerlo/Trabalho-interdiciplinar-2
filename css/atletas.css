@@ -84,4 +84,88 @@ label {
 .btn-cadastrar:hover {
     background: #007700;
 }
+.btn-Limpar {
+    background: red;
+    color: white;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin: 20px auto 0 auto;
+    display: block;
+    cursor: pointer;
+    font-size: 16px;
+}
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+thead tr {
+    background: #6ec3c1; 
+}
+
+
+thead th {
+    padding: 14px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* --- LINHAS DO CORPO --- */
+tbody tr {
+    background: #fafafa;
+    transition: 0.2s;
+}
+
+tbody tr:nth-child(even) {
+    background: #f1f1f1;
+}
+
+tbody tr:hover {
+    background: #e9f5f4; /* leve destaque */
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+
+.btn-excluir {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-excluir:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+}
+
+.btn-excluir:active {
+    transform: scale(0.95);
+}
+
+
+
+
+
+
 

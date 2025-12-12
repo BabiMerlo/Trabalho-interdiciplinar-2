@@ -15,7 +15,6 @@ btAcessar.addEventListener("click", () => {
     const email = document.getElementById("inEmail").value.trim();
     const senha = document.getElementById("inSenha").value.trim();
 
-    // procura organizador
     const autorizado = organizadores.find(user =>
         user.email === email && user.senha === senha
     );
@@ -24,10 +23,9 @@ btAcessar.addEventListener("click", () => {
         outMsg.style.color = "green";
         outMsg.textContent = "Login realizado com sucesso! Redirecionando...";
         window.location.href = "home.html";
-        return false;   // impede a página de recarregar
+       
     } else {
         outMsg.style.color = "red";
         outMsg.textContent = "Acesso negado! Email ou senha incorretos.";
-        return false;   // mantém na página para tentar novamente
     }
 });

@@ -1,37 +1,58 @@
-import { AtletaControl } from "./atletaControl.js";
+import { AtletaController } from "./AtletaController.js";
 
-window.onload = function () {
+const controller = new AtletaController();
 
-    const btCadastra = document.getElementById("btCadastra");
+document.addEventListener("DOMContentLoaded", () => {
 
-    btCadastra.addEventListener("click", function (event) {
-        event.preventDefault();
+    const inNome = document.getElementById("inNome");
+    const inEmail = document.getElementById("inEmail");
+    const inCpf = document.getElementById("inCpf");
+    const sltTipo = document.getElementById("sltTipo");
+    const outMsg = document.getElementById("outMsg");
+    const btn = document.getElementById("btCadastra");
 
-        let nome = document.getElementById("inNome").value.trim();
-        let email = document.getElementById("inEmail").value.trim();
-        let cpf = document.getElementById("inCpf").value.trim();
-        let tipo = document.getElementById("sltTipo").value;
+    atualizarTabela();
 
-        // Verificações básicas
-        if (nome === "" || email === "" || cpf === "" || tipo === "Informe o tipo") {
-            alert("Preencha todos os campos!");
-            return;
-        }
+    btn.addEventListener("click", () => {
+        const nome = inNome.value.trim();
+        const email = inEmail.value.trim();
+        const cpf = inCpf.value.trim();
+        const tipo = sltTipo.value;
 
-        // Controller
-        let ok = AtletaControl.cadastrarAtleta(nome, email, cpf, tipo);
-
-        if (ok) {
-            alert("Atleta cadastrado com sucesso!");
-
-            // limpa os campos
-            document.getElementById("inNome").value = "";
-            document.getElementById("inEmail").value = "";
-            document.getElementById("inCpf").value = "";
-            document.getElementById("sltTipo").selectedIndex = 0;
-
+        if (!nome || !email || !cpf || tipo === "Informe o tipo") {
+            outMsg.style.color = "red";
+            outMsg.textContent = "Preencha todos os campos corretamente.";
         } else {
-            alert("Já existe um atleta com esse CPF!");
+            controller.adicionar(nome, email, cpf, tipo);
+            atualizarTabela();
+            outMsg.textContent = "";
+
+            inNome.value = "";
+            inEmail.value = "";
+            inCpf.value = "";
+            sltTipo.selectedIndex = 0;
         }
     });
+});
+
+function atualizarTabela() {
+    const tbody = document.getElementById("tbodyAtletas");
+    tbody.innerHTML = "";
+
+    controller.listar().forEach((a, i) => {
+        tbody.innerHTML += `
+            <tr>
+                <td>${a.nome}</td>
+                <td>${a.email}</td>
+                <td>${a.cpf}</td>
+                <td>${a.tipo}</td>
+                <td><button class="btn-excluir" onclick="window.excluirAtleta(${i})">Excluir</button></td>
+            </tr>
+        `;
+    });
+}
+
+window.excluirAtleta = function(i) {
+    controller.remover(i);
+    atualizarTabela();
 };

@@ -53,17 +53,91 @@ button {
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .edit {
-    background: #6fafac;
+    background: #649b98;
 }
 
 .save {
-    background: #5fbf9f;
+    background: #47b7bcaa;
 }
 
 .delete {
     background: #d66b6b;
+}
+
+
+.tabela-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #80808042;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.tabela-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Cabeçalho da tabela */
+table thead {
+    background: #0ca49a81;
+    color: rgb(0, 0, 0);
+}
+
+table thead th {
+    padding: 12px;
+    font-size: 15px;
+}
+
+
+
+table tbody td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.delete-inline, .edit-inline {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 4px;
+    font-size: 14px;
+    color: white;
+    transition: 0.2s;
+}
+
+/* Botão excluir */
+.delete-inline {
+    background-color: #e74c3c; /* vermelho */
+}
+
+.delete-inline:hover {
+    background-color: #c0392b;
+}
+
+/* Botão editar */
+.edit-inline {
+    background-color: #3498db; /* azul */
+}
+
+.edit-inline:hover {
+    background-color: #217dbb;
 }

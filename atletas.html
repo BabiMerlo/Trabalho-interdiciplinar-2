@@ -36,18 +36,19 @@
     </header>
     <div class="top-border-line"></div>
 
-     </header>
+    </header>
 
     <div class="top-border-line"></div>
     <div class="img1">
         <img src="imagens/img2.jpg" class="logo-corrida" alt="IfesRaces Logo">
         <h1>Inscrição </h1>
-       
+
     </div>
 
     <main class="form-container">
 
         <form class="form-box">
+            <div class="container"></div>
 
             <label>NOME
                 <input type="text" id="inNome" placeholder="Informe seu nome">
@@ -69,14 +70,35 @@
                 </select>
             </label>
 
-            <button id="btCadastra" class="btn-cadastrar">Cadastrar</button>
+            <button type="button" id="btCadastra" class="btn-cadastrar">
+                Cadastrar
+            </button>
 
         </form>
     </main>
 
-    
-    <script src="js.atletas/atletaView.js"></script>
-   
+     <table style="width:90%; margin:20px auto" border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>CPF</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+
+                
+            </tr>
+        </thead>
+        <tbody id="tbodyAtletas"></tbody>
+    </table>]
+    </div>
+
+
+  <script type="module" src="js.atletas/AtletaView.js"></script>
+
+   <p id="outMsg"></p>
+
+
 
     <footer>
         ©IfesRaces 2025
